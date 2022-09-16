@@ -1,0 +1,15 @@
+<p>asnmnt6 works!</p>
+<p>assign6 works!</p>
+<div *ngFor="let employee of employees">
+        
+      
+    <ng-container *ngIf="employee.age>50; else second ">
+             
+            <div [ngClass]="'one'"> {{employee.name}},    Age :  {{employee.age}}
+            </div>
+            </ng-container>
+            <ng-template #second>
+                <div [ngClass]="'two'">{{employee.name}},  Age :  {{employee.age}}
+                </div>
+            </ng-template>
+</div>
